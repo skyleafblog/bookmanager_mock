@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>書籍一覧 — モック</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/list.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <img src="../image/logo-origin.png" class="header-logo" alt="SKYLEAF">
+        <span class="site-title">書籍管理システム</span>
+        <div class="header-actions">
+            <span class="login-user" id="header-user">管理者 さん</span>
+            <a href="login.html" class="btn btn-sm">ログアウト</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="page-header">
+        <h2>書籍一覧</h2>
+        <a href="new.html" class="btn" id="btn-new">+ 新規登録</a>
+    </div>
+
+    <!-- 検索フォーム -->
+    <section class="search-section">
+        <div class="search-row">
+            <div class="form-group">
+                <label for="searchTitle">タイトル</label>
+                <input type="text" id="searchTitle" placeholder="タイトルで絞り込み">
+            </div>
+            <div class="form-group">
+                <label for="searchCategory">カテゴリ</label>
+                <select id="searchCategory">
+                    <option value="">— すべて —</option>
+                    <option>プログラミング</option>
+                    <option>データベース</option>
+                    <option>ネットワーク</option>
+                    <option>セキュリティ</option>
+                    <option>マネジメント</option>
+                </select>
+            </div>
+            <div class="form-group form-group-action">
+                <button class="btn" onclick="filterBooks()">検索</button>
+                <button class="btn" onclick="clearSearch()">クリア</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 書籍テーブル -->
+    <section class="table-section">
+        <p class="result-count"><span id="result-count">7</span> 件表示（最大10件）</p>
+        <table class="book-table" id="book-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>タイトル</th>
+                    <th>著者</th>
+                    <th>カテゴリ</th>
+                    <th>登録日</th>
+                    <th id="th-action" style="display:none;">操作</th>
+                </tr>
+            </thead>
+            <tbody id="book-tbody"></tbody>
+        </table>
+        <div class="empty-message" id="empty-msg" style="display:none;">
+            該当する書籍が見つかりませんでした。
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>&copy; 2026 SKYLEAF. All rights reserved.</p>
+</footer>
+
+<!-- モックナビゲーター -->
+<nav id="mock-nav">
+    <strong>📄 書籍一覧画面</strong>
+    <div class="divider"></div>
+    <a href="#" onclick="switchRole('admin'); return false;">表示切替: 管理者</a>
+    <a href="#" onclick="switchRole('general'); return false;">表示切替: 一般ユーザー</a>
+    <div class="divider"></div>
+    <a href="login.html">ログイン画面</a>
+    <a href="new.html">書籍登録画面</a>
+    <a href="edit.html">書籍編集画面</a>
+</nav>
+
+<script src="../js/list.js"></script>
+</body>
+</html>

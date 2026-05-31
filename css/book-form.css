@@ -1,0 +1,20 @@
+/* book-form.css — 書籍登録・編集画面 */
+
+/* 登録・編集フォーム */
+.book-form {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 24px 28px;
+    max-width: 520px;
+    background-color: #fafafa;
+}
+
+.book-form .form-group input,
+.book-form .form-group select {
+    max-width: 380px;
+}
+
+/* .btn-row で flex / gap は定義済み。ここではマージンのみ */
+.form-actions {
+    margin-top: 20px;
+}

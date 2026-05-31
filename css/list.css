@@ -1,0 +1,101 @@
+/* list.css — 書籍一覧画面 */
+
+/* 検索フォーム */
+.search-section {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+.search-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.search-row .form-group {
+    margin-bottom: 0;
+    flex: 1;
+    min-width: 140px;
+}
+
+.form-group-action {
+    display: flex;
+    gap: 8px;
+    flex: 0 0 auto;
+}
+
+/* テーブル */
+.table-section {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.result-count {
+    padding: 8px 14px;
+    font-size: 12px;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    background-color: #fafafa;
+}
+
+.book-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.book-table th {
+    padding: 9px 14px;
+    text-align: left;
+    font-size: 13px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+.book-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.book-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.book-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.action-cell {
+    white-space: nowrap;
+}
+
+.date-cell {
+    white-space: nowrap;
+    color: #555;
+}
+
+.badge-new {
+    display: inline-block;
+    background-color: #e05a2b;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.action-cell .btn {
+    margin-right: 4px;
+}
+
+.empty-message {
+    padding: 40px;
+    text-align: center;
+    color: #888;
+}

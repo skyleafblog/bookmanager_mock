@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン — モック</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body class="login-page">
+
+<header class="site-header">
+    <div class="header-inner">
+        <img src="../image/logo-origin.png" class="header-logo" alt="SKYLEAF">
+        <span class="site-title">書籍管理システム</span>
+    </div>
+</header>
+
+<div class="login-content">
+    <div class="login-container">
+
+        <img src="../image/logo-origin.png" class="login-logo" alt="SKYLEAF">
+
+        <!-- エラー例（通常は非表示） -->
+        <div class="alert-error" id="error-msg" style="display:none;">
+            ユーザ名またはパスワードが正しくありません
+        </div>
+
+        <form onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <label for="username">ユーザ名</label>
+                <input type="text" id="username" placeholder="ユーザ名を入力" autofocus oninput="updateButtons()">
+            </div>
+            <div class="form-group">
+                <label for="userId">ユーザID</label>
+                <input type="text" id="userId" placeholder="ユーザIDを入力" oninput="updateButtons()">
+            </div>
+            <div class="form-group">
+                <label for="password">パスワード</label>
+                <input type="password" id="password" placeholder="パスワードを入力" oninput="updateButtons()">
+            </div>
+            <div class="btn-row login-buttons">
+                <button type="submit" id="loginBtn" class="btn" disabled>ログイン</button>
+                <button type="button" id="registerBtn" class="btn" disabled onclick="handleRegister()">登録</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<footer class="site-footer">
+    <p>&copy; 2026 SKYLEAF. All rights reserved.</p>
+</footer>
+
+<!-- モックナビゲーター -->
+<nav id="mock-nav">
+    <strong>📄 ログイン画面</strong>
+    <div class="divider"></div>
+    <span style="color:#888; font-size:11px;">認証情報（モック用）</span>
+    <a href="#" onclick="setAdmin(); return false;">→ 管理者でログイン</a>
+    <a href="#" onclick="setGeneral(); return false;">→ 一般ユーザーでログイン</a>
+    <a href="#" onclick="showError(); return false;">→ 認証エラーを表示</a>
+</nav>
+
+<script src="../js/login.js"></script>
+</body>
+</html>

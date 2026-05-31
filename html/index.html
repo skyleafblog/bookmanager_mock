@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>モック画面一覧 — 書籍管理システム</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <style>
+        .index-list { list-style: none; margin-top: 8px; }
+        .index-list li { padding: 10px 0; border-bottom: 1px solid #eee; display: flex; align-items: baseline; gap: 12px; }
+        .index-list li:last-child { border-bottom: none; }
+        .index-list a { font-size: 15px; font-weight: bold; }
+        .index-list .desc { font-size: 13px; color: #666; }
+        .badge { font-size: 11px; padding: 1px 7px; border: 1px solid #ccc; border-radius: 3px; color: #666; }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <span class="site-title">書籍管理システム — モック画面</span>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="page-header">
+        <h2>モック画面一覧</h2>
+    </div>
+
+    <section class="table-section">
+        <ul class="index-list" style="padding: 0 18px;">
+            <li>
+                <a href="login.html">ログイン画面</a>
+                <span class="desc">認証フォーム・エラー表示の確認</span>
+                <span class="badge">全員</span>
+            </li>
+            <li>
+                <a href="list.html">書籍一覧画面</a>
+                <span class="desc">検索・テーブル表示・管理者/一般の切替</span>
+                <span class="badge">認証済み</span>
+            </li>
+            <li>
+                <a href="new.html">書籍登録画面</a>
+                <span class="desc">登録フォーム・バリデーションエラーの確認</span>
+                <span class="badge">管理者</span>
+            </li>
+            <li>
+                <a href="edit.html">書籍編集画面</a>
+                <span class="desc">編集フォーム・バリデーションエラーの確認</span>
+                <span class="badge">管理者</span>
+            </li>
+            <li>
+                <a href="403.html">403 エラー画面</a>
+                <span class="desc">権限不足時のエラー表示</span>
+                <span class="badge">—</span>
+            </li>
+            <li>
+                <a href="404.html">404 エラー画面</a>
+                <span class="desc">書籍が見つからない場合のエラー表示</span>
+                <span class="badge">—</span>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+</body>
+</html>

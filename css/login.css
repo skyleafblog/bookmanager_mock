@@ -1,0 +1,36 @@
+/* login.css — ログイン画面 */
+
+.login-page {
+    background-color: #f0f0f0;
+}
+
+.login-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.login-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 36px 32px;
+    width: 340px;
+}
+
+.login-logo {
+    height: 80px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* .btn-row で flex / gap は定義済み。ここではマージンと等幅指定のみ */
+.login-buttons {
+    margin-top: 8px;
+}
+
+.login-buttons .btn {
+    flex: 1;
+}
